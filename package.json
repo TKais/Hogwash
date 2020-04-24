@@ -1,0 +1,41 @@
+{
+  "name": "hogwash",
+  "version": "1.0.0",
+  "description": "A web app that allows users to run Natural Language Processing (NLP) on articles or blogs found on other websites using the Aylien API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-dev": "webpack --config webpack.dev.js",
+    "run-dev": "npm run build-dev && webpack-dev-server --config webpack.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TKais/Hogwash.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "React",
+    "NodeJS",
+    "Sass",
+    "Webpack"
+  ],
+  "author": "Tiffany T Kaiser",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TKais/Hogwash/issues"
+  },
+  "homepage": "https://github.com/TKais/Hogwash#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^4.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
