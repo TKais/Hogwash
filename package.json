@@ -2,11 +2,12 @@
   "name": "hogwash",
   "version": "1.0.0",
   "description": "A web app that allows users to run Natural Language Processing (NLP) on articles or blogs found on other websites using the Aylien API.",
-  "main": "index.js",
+  "main": "src/client/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-dev": "webpack --config webpack.dev.js",
-    "run-dev": "npm run build-dev && webpack-dev-server --config webpack.dev.js --port 8000"
+    "build-prod": "webpack --config webpack.prod.js",
+    "start": "npm run build-dev && webpack-dev-server --config webpack.dev.js --port 8000"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
   },
   "homepage": "https://github.com/TKais/Hogwash#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "webpack": "^4.42.1",
