@@ -15,17 +15,7 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
-                use: [
-                    {
-                      loader: 'babel-loader',
-                      options: {
-                        presets: ['@babel/preset-react']
-                      }
-                    },
-                    {
-                        loader: 'eslint-loader'
-                    }
-                ],
+                use: ['babel-loader', 'eslint-loader'],
             },
             {
                 test: /\.(sa|sc|c)ss$/,
