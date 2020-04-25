@@ -9,6 +9,12 @@
     "es6": true
   },
   "extends": [
-      "airbnb-base"
-  ]
+      "airbnb-base",
+      "plugin:react/recommended"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }
