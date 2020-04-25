@@ -3,6 +3,14 @@ A web app that allows users to run Natural Language Processing (NLP) on articles
 
 Returns information about the article, whether the content is subjective or objective, and whether it is positive, neutral, or negative in tone.
 
+## Getting Started
+
+Run the app:
+`npm run start`
+
+Run tests:
+`npm run test`
+
 ## Technologies
 
 ### Front End
