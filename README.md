@@ -6,7 +6,7 @@ Returns information about the article, whether the content is subjective or obje
 ## Getting Started
 
 Run the app:
-`npm run start`
+`npm i && npm run start`
 
 Run tests:
 `npm run test`
