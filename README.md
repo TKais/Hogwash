@@ -6,7 +6,9 @@ Returns information about the article, whether the content is subjective or obje
 ## Getting Started
 
 Run the app:
-`npm run start`
+1. `npm i`
+2. `npm run start`
+3. Navigate to `localhost:8000` in the browser
 
 Run tests:
 `npm run test`
