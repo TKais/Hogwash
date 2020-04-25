@@ -3,19 +3,28 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+    mode: 'development',
+    entry: './src/index.js',
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.js'
+    },
+    devtool: 'source-map',
     module: {
-        mode: 'development',
-        entry: 'src/index.js',
-        output: {
-            path: path.resolve(__dirname, 'dist'),
-            filename: 'bundle.js'
-        }
-        devtool: 'source-map',
         rules: [
-            test: /\.(js|jsx)$/,
-            exclude: /node_modules/,
-            use: {
-                loader: 'babel-loader'
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader'
+                }
+            },
+            {
+                test: /\.(sa|sc|c)ss$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader'
+                }
             }
         ]
     },
@@ -33,5 +42,5 @@ module.exports = {
           cleanStaleWebpackAssets: true,
           protectWebpackAssets: false
         })
-      ]
+    ]
 }
