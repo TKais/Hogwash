@@ -15,18 +15,18 @@ Run tests:
 
 ## Technologies
 
-### Front End
+#### Front End
 * React
 * Sass
 
-### Back End
+#### Back End
 * NodeJS
 * Express
 
-### Build
+#### Build
 * Webpack
 
-### Testing
+#### Testing
 * Jest
 * Enzyme
 * Lighthouse
