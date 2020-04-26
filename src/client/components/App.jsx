@@ -1,11 +1,10 @@
 import React from 'react';
+import Header from './Header';
 
 function App() {
   return (
     <div>
-      <h1>Heading</h1>
-      <button>Click</button>
-      <div id="response"></div>
+      <Header headerText="Hogwash" />
     </div>
   );
 }

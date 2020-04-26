@@ -56,6 +56,7 @@
     "jest-enzyme": "^7.1.2",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.0",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "webpack-lighthouse-plugin": "^1.0.5"
   }
 }

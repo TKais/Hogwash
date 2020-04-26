@@ -29,4 +29,5 @@ Run tests:
 ### Testing
 * Jest
 * Enzyme
+* Lighthouse
 
