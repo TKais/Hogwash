@@ -1,5 +1,3 @@
-import { updateUIWithErrors } from './uiUpdater';
-
 /*
 // Implementation details
 */
