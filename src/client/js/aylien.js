@@ -13,8 +13,7 @@ function isValidURLString(url) {
 */
 
 export default async function getData(url) {
-  if(!isValidURLString(url)) {
-    updateUIWithErrors(url);
+  if (!isValidURLString(url)) {
     throw new Error('Invalid URL string');
   }
 }
