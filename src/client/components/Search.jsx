@@ -5,13 +5,26 @@ import Button from './Button.jsx';
 // import getData from '../js/aylien';
 
 function Search() {
-  const [mode, setMode] = useState('');
-  const label = mode === 'url' || !mode ? 'Provide a url' : 'Provide a search query';
+  const [mode, setMode] = useState('Url');
+  const [searchString, setSearchString] = useState('');
+  const label = mode === 'Url' || !mode ? 'Provide a url' : 'Provide a search query';
+  console.log('?????', searchString);
 
   return (
     <div>
-      <Input ariaLabel={label} mode={mode} />
-      <Button text="mode" onClick={evt => setMode(evt.target.text)} />
+      <Input
+        ariaLabel={label}
+        mode={mode}
+        value={searchString}
+        onChange={evt => setSearchString(evt.target.value)}
+      />
+      <Button
+        text="Set Mode"
+        onClick={evt => setMode(evt.target)}
+      />
+      <Button
+        text="Check"
+      />
     </div>
   );
 }

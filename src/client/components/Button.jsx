@@ -3,11 +3,16 @@ import PropTypes from 'prop-types';
 
 function Button(props) {
   return (
-  <button>{props.text}</button>
+    <button
+      onClick={props.onClick}
+    >
+      {props.text}
+    </button>
   );
 }
 
 Button.propTypes = {
+  onClick: PropTypes.func,
   text: PropTypes.string.isRequired,
 };
 
