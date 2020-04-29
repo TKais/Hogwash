@@ -8,7 +8,6 @@ function Search() {
   const [mode, setMode] = useState('Url');
   const [searchString, setSearchString] = useState('');
   const label = mode === 'Url' || !mode ? 'Provide a url' : 'Provide a search query';
-  console.log('?????', searchString);
 
   return (
     <div>
