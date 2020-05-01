@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 // import PropTypes from 'prop-types';
 import Input from './Input.jsx';
 import Button from './Button.jsx';
+import MultiButton from './MultiButton.jsx';
 // import getData from '../js/aylien';
 
 function Search() {
@@ -17,12 +18,17 @@ function Search() {
         value={searchString}
         onChange={evt => setSearchString(evt.target.value)}
       />
+      <MultiButton
+        onClick={evt => setMode(evt.target)}
+      />
       <Button
-        text="Set Mode"
+        text="Query"
+        variant="tertiary"
         onClick={evt => setMode(evt.target)}
       />
       <Button
         text="Check"
+        variant="primary"
       />
     </div>
   );
