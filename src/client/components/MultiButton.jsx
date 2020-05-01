@@ -8,3 +8,9 @@ function MultiButton(props) {
     <Button id="url-button" variant="tertiary" /> | <Button variant="tertiary" />
   );
 }
+
+MultiButton.propTypes = {
+  onClick: PropTypes.func,
+}
+
+export default MultiButton;
