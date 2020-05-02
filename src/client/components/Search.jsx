@@ -8,7 +8,10 @@ import MultiButton from './MultiButton.jsx';
 function Search() {
   const [mode, setMode] = useState('Url');
   const [searchString, setSearchString] = useState('');
+  const [activeButton, setActiveButton] = useState('url-button');
   const label = mode === 'Url' || !mode ? 'Provide a url' : 'Provide a search query';
+  console.log(`activeButton is: ${activeButton}`);
+  console.log(`setMode is: ${setMode}`);
 
   return (
     <div>
@@ -19,12 +22,11 @@ function Search() {
         onChange={evt => setSearchString(evt.target.value)}
       />
       <MultiButton
-        onClick={evt => setMode(evt.target)}
-      />
-      <Button
-        text="Query"
-        variant="tertiary"
-        onClick={evt => setMode(evt.target)}
+        firstButtonId="url-button"
+        firstButtonText="Url"
+        secondButtonId="query-button"
+        secondButtonText="Query"
+        onClick={evt => console.log(evt.target.id) && setActiveButton(evt.target.id)}
       />
       <Button
         text="Check"
