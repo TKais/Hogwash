@@ -28,7 +28,7 @@ function Search() {
       <Button
         text="Check"
         variant="primary"
-        onClick={() => activeButton === 'url-button' ? aylienAPI.getURLData(searchString) : aylienAPI.getQueryData(searchString)}
+        onClick={() => (activeButton === 'url-button' ? aylienAPI.getURLData(searchString) : aylienAPI.getQueryData(searchString))}
       />
     </div>
   );
