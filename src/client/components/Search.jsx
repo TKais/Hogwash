@@ -6,18 +6,15 @@ import MultiButton from './MultiButton.jsx';
 // import getData from '../js/aylien';
 
 function Search() {
-  const [mode, setMode] = useState('Url');
   const [searchString, setSearchString] = useState('');
   const [activeButton, setActiveButton] = useState('url-button');
-  const label = mode === 'Url' || !mode ? 'Provide a url' : 'Provide a search query';
-  console.log(`activeButton is: ${activeButton}`);
-  console.log(`setMode is: ${setMode}`);
+  const label = activeButton === 'url-button' ? 'Provide a url' : 'Provide a search query';
 
   return (
     <div>
       <Input
+        placeholder={label}
         ariaLabel={label}
-        mode={mode}
         value={searchString}
         onChange={evt => setSearchString(evt.target.value)}
       />
@@ -26,7 +23,7 @@ function Search() {
         firstButtonText="Url"
         secondButtonId="query-button"
         secondButtonText="Query"
-        onClick={evt => console.log(evt.target.id) && setActiveButton(evt.target.id)}
+        onClick={evt => setActiveButton(evt.target.id)}
       />
       <Button
         text="Check"

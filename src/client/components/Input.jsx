@@ -16,7 +16,6 @@ function Input(props) {
 Input.propTypes = {
   ariaLabel: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
-  mode: PropTypes.string,
   type: PropTypes.string,
   value: PropTypes.string,
   onChange: PropTypes.func,

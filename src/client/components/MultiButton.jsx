@@ -1,21 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button.jsx';
 
 function MultiButton(props) {
+  const [active, setActive] = useState(`${props.firstButtonId}`);
+
   return (
-    <div onClick={props.onClick}>
+    <div className="multibutton" onClick={props.onClick}>
       <Button
         id={props.firstButtonId}
+        className={active === props.firstButtonId ? 'active' : ''}
         variant="tertiary"
         text={props.firstButtonText}
-        // onClick={evt => setActiveButton(evt.target.id)}
+        onClick={evt => setActive(evt.target.id)}
       /> |
       <Button
         id={props.secondButtonId}
+        className={active === props.secondButtonId ? 'active' : ''}
         variant="tertiary"
         text={props.secondButtonText}
-        // onClick={evt => setActiveButton(evt.target.id)}
+        onClick={evt => setActive(evt.target.id)}
       />
     </div>
   );
