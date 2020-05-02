@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Input from './Input.jsx';
 import Button from './Button.jsx';
 import MultiButton from './MultiButton.jsx';
-// import getData from '../js/aylien';
+import aylienAPI from '../js';
 
 function Search() {
   const [searchString, setSearchString] = useState('');
@@ -28,6 +28,7 @@ function Search() {
       <Button
         text="Check"
         variant="primary"
+        onClick={() => activeButton === 'url-button' ? aylienAPI.getURLData(searchString) : aylienAPI.getQueryData(searchString)}
       />
     </div>
   );

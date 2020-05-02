@@ -12,7 +12,7 @@ function isValidURLString(url) {
 // API
 */
 
-export default async function getData(url) {
+export default async function getURLData(url) {
   if (!isValidURLString(url)) {
     throw new Error('Invalid URL string');
   }
