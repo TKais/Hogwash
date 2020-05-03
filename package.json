@@ -55,8 +55,9 @@
     "html-webpack-plugin": "^4.2.0",
     "jest": "^25.4.0",
     "jest-enzyme": "^7.1.2",
+    "node-sass": "^4.14.0",
     "sass-loader": "^8.0.2",
-    "style-loader": "^1.2.0",
+    "style-loader": "^1.2.1",
     "webpack-dev-server": "^3.10.3",
     "webpack-lighthouse-plugin": "^1.0.5"
   }

@@ -6,6 +6,7 @@ function Button(props) {
     <button
       id={props.id}
       onClick={props.onClick}
+      className={`button button--${props.variant}`}
     >
       {props.text}
     </button>
@@ -16,6 +17,7 @@ Button.propTypes = {
   id: PropTypes.string,
   onClick: PropTypes.func,
   text: PropTypes.string.isRequired,
+  variant: PropTypes.string.isRequired,
 };
 
 export default Button;
