@@ -1,9 +1,5 @@
-import getURLData from './url';
-import getQueryData from './query';
+import getArticles from './getArticles';
 
-const aylienAPI = {
-  getURLData,
-  getQueryData,
-};
-
-export default aylienAPI;
+export default {
+  getArticles
+}

@@ -12,7 +12,7 @@ function isValidQueryString(queryString) {
 // API
 */
 
-export default async function getNewsArticles(queryString) {
+export default async function getArticles(queryString) {
   if (!isValidQueryString(queryString)) {
     throw new Error('Invalid query string');
   }
