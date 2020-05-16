@@ -17,4 +17,4 @@ describe('App', () => {
   test('should have a Search component', () => {
     expect(appComponent.find(Search)).toHaveLength(1);
   });
-})
+});
