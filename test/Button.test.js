@@ -4,10 +4,13 @@ import Button from '../src/client/components/Button.jsx';
 
 describe('Button', () => {
   describe('Primary variant', () => {
-    const buttonComponent = shallow(<Button variant="primary" text="Primary button" />);
+    const primaryButton = shallow(<Button variant="primary" text="Primary button" />);
   
     test('should render', () => {
-      expect(buttonComponent.exists()).toBeTruthy();
+      expect(primaryButton.exists()).toBeTruthy();
+    });
+    test('should have "primary" as its variant', () => {
+      expect(primaryButton.hasClass('button--primary')).toEqual(true);
     });
   });
 });
