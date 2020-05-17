@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
+const dotenv = require('dotenv');
 const port = 8080;
+
+dotenv.config();
 
 // middleware
 app.use(express.static('dist'));
