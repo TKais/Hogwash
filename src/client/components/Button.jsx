@@ -17,7 +17,7 @@ Button.propTypes = {
   id: PropTypes.string,
   onClick: PropTypes.func,
   text: PropTypes.string.isRequired,
-  variant: PropTypes.string.isRequired,
+  variant: PropTypes.oneOf(['primary','secondary', 'tertiary']),
 };
 
 export default Button;

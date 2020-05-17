@@ -1,5 +1,6 @@
 module.exports = {
-  "setupFilesAfterEnv": [
+  "setupFiles": [
+    "jest-prop-type-error",
     "./test/enzymeSetup.js"
   ],
   "testPathIgnorePatterns": [
