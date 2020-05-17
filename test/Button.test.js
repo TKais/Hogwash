@@ -4,7 +4,8 @@ import Button from '../src/client/components/Button.jsx';
 
 describe('Button', () => {
   describe('Primary variant', () => {
-    const primaryButton = shallow(<Button variant="primary" text="Primary button" />);
+    const mockClickCallback = jest.fn();
+    const primaryButton = shallow(<Button variant="primary" text="Primary button" onClick={mockClickCallback} />);
   
     test('should render', () => {
       expect(primaryButton.exists()).toBeTruthy();
@@ -15,5 +16,9 @@ describe('Button', () => {
     test('should have correct text', () => {
       expect(primaryButton.text()).toEqual('Primary button');
     });
+    test('should fire click event', () => {
+      primaryButton.find('button').simulate('click');
+      expect(mockClickCallback.mock.calls.length).toEqual(1);
+    })
   });
 });
