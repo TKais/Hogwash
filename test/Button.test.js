@@ -3,9 +3,11 @@ import { shallow } from 'enzyme';
 import Button from '../src/client/components/Button.jsx';
 
 describe('Button', () => {
-  const buttonComponent = shallow(<Button variant="primary" text="Test button" />);
-
-  test('should render', () => {
-    expect(buttonComponent.exists()).toBeTruthy();
-  })
+  describe('Primary variant', () => {
+    const buttonComponent = shallow(<Button variant="primary" text="Primary button" />);
+  
+    test('should render', () => {
+      expect(buttonComponent.exists()).toBeTruthy();
+    });
+  });
 });
