@@ -12,5 +12,8 @@ describe('Button', () => {
     test('should have "primary" as its variant', () => {
       expect(primaryButton.hasClass('button--primary')).toEqual(true);
     });
+    test('should have correct text', () => {
+      expect(primaryButton.text()).toEqual('Primary button');
+    });
   });
 });
