@@ -8,4 +8,5 @@ describe('Search', () => {
   test('should render', () => {
     expect(search.exists()).toBeTruthy();
   });
+  test('should handle test failure')
 });

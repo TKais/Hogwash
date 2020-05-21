@@ -3,12 +3,30 @@ import React, { useState } from 'react';
 import Input from './Input.jsx';
 import Button from './Button.jsx';
 import MultiButton from './MultiButton.jsx';
+import Error from './Error.jsx';
+import List from './List.jsx';
 import API from '../js';
 
 function Search() {
   const [searchString, setSearchString] = useState('');
   const [activeButton, setActiveButton] = useState('url-button');
+  const [error, setError] = useState('');
+  const [articles, setArticles] = useState([]);
   const label = activeButton === 'url-button' ? 'Provide a url' : 'Provide a search query';
+
+  console.log(setArticles);
+
+  async function submitInput() {
+    try {
+      if (activeButton === 'url-button') {
+        await API.getURLData(searchString);
+      } else {
+        await API.getArticles(searchString);
+      }
+    } catch (err) {
+      setError(err.message);
+    }
+  }
 
   return (
     <div>
@@ -28,8 +46,14 @@ function Search() {
       <Button
         text="Check"
         variant="primary"
-        onClick={() => (activeButton === 'url-button' ? API.getURLData(searchString) : API.getQueryData(searchString))}
+        onClick={submitInput}
       />
+      {
+        error.length > 0 && <Error message={error} />
+      }
+      {
+        articles.length > 0 && <List item={articles} />
+      }
     </div>
   );
 }
