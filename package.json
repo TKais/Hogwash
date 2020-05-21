@@ -8,6 +8,7 @@
     "test:coverage": "jest --coverage",
     "build-dev": "webpack --config webpack.dev.js",
     "build-prod": "webpack --config webpack.prod.js",
+    "run-server": "node src/server/index.js",
     "start": "npm run build-dev && webpack-dev-server --config webpack.dev.js --port 8000"
   },
   "repository": {

@@ -11,10 +11,10 @@ function Search() {
   const [searchString, setSearchString] = useState('');
   const [activeButton, setActiveButton] = useState('url-button');
   const [error, setError] = useState('');
-  const [articles, showArticles] = useState([]);
+  const [articles, setArticles] = useState([]);
   const label = activeButton === 'url-button' ? 'Provide a url' : 'Provide a search query';
 
-  console.log(showArticles);
+  console.log(setArticles);
 
   async function submitInput() {
     try {
