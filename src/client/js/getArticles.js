@@ -21,7 +21,17 @@ function isValidQueryString(queryString) {
 */
 
 export default async function getArticles(queryString) {
+  console.log('process--->', process.env.API_KEY);
   if (!isValidQueryString(queryString)) {
     throw new Error('Invalid query string');
   }
+  fetch('http://localhost:8080/articles', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'text/plain',
+    },
+    body: queryString,
+  })
+    .then(data => data.json())
+    .then(data => console.log(data));
 }
