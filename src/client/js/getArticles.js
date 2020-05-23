@@ -10,7 +10,7 @@ import 'regenerator-runtime/runtime';
 
 function isValidQueryString(queryString) {
   // Run logic to prevent XSS attacks
-  if (queryString && /[<>&]/.test(queryString)) {
+  if (!queryString || (queryString && /[<>&]/.test(queryString))) {
     return false;
   }
   return true;
