@@ -20,7 +20,9 @@ function Search() {
         await API.getURLData(searchString);
       } else {
         const requestArticles = await API.getArticles(searchString);
-        setArticles(requestArticles.articles);
+        const ok = await requestArticles.json();
+        console.log(ok);
+        setArticles(ok.articles);
       }
     } catch (err) {
       setError(err.message);
