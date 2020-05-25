@@ -14,14 +14,15 @@ function Search() {
   const [articles, setArticles] = useState([]);
   const label = activeButton === 'url-button' ? 'Provide a url' : 'Provide a search query';
 
-  console.log(setArticles);
-
   async function submitInput() {
     try {
       if (activeButton === 'url-button') {
         await API.getURLData(searchString);
       } else {
-        await API.getArticles(searchString);
+        const requestArticles = await API.getArticles(searchString);
+        const ok = await requestArticles.json();
+        console.log(ok);
+        setArticles(ok.articles);
       }
     } catch (err) {
       setError(err.message);
@@ -52,7 +53,7 @@ function Search() {
         error.length > 0 && <Error message={error} />
       }
       {
-        articles.length > 0 && <List item={articles} />
+        articles && articles.length > 0 && <List item={articles} />
       }
     </div>
   );
