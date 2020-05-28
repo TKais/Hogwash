@@ -48,7 +48,6 @@ app.get('/', function(req, res) {
 
 app.post('/articles', function(req, res) {
   const composedUrl = `${process.env.API_URL}q=${req.body}&apiKey=${process.env.API_KEY}`;
-  
   getNewsArticles(composedUrl).then(data => res.json(data));
 });
 
