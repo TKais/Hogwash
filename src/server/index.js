@@ -21,7 +21,7 @@ app.use(function(req, res, next) {
 });
 
 // Helper functions
-function getNewsArticles(url) {
+function fetchAPIData(url) {
   return new Promise((res, rej) => {
     try {
       https.get(url, response => {
@@ -48,7 +48,7 @@ app.get('/', function(req, res) {
 
 app.post('/articles', function(req, res) {
   const composedUrl = `${process.env.API_URL}q=${req.body}&apiKey=${process.env.API_KEY}`;
-  getNewsArticles(composedUrl).then(data => res.json(data));
+  fetchAPIData(composedUrl).then(data => res.json(data));
 });
 
 app.listen(port, function() {
