@@ -24,7 +24,6 @@ export default async function getArticles(queryString) {
   if (!isValidQueryString(queryString)) {
     throw new Error('Invalid query string');
   }
-
   try {
     const request = await fetch('http://localhost:8080/articles', {
       method: 'POST',
