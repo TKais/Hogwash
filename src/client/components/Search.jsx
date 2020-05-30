@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import PropTypes from 'prop-types';
 import Input from './Input.jsx';
 import Button from './Button.jsx';
 import MultiButton from './MultiButton.jsx';
