@@ -1,2 +1,9 @@
 @import 'button.scss';
 @import 'input.scss';
+@import 'list.scss';
+@import 'theme.scss';
+
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
