@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function Toggle(props) {
   return (
-    <button onClick={props.onClick}>
+    <button onClick={props.onClick} className="toggle">
       Switch
     </button>
   );

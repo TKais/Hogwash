@@ -1,5 +1,6 @@
 @import 'colors.scss';
 
+// Light Themes
 $theme-light: (
   "bg-color": map-get($colors, "cream"),
   "font-color": map-get($colors, "navy"),
@@ -8,6 +9,7 @@ $theme-light: (
   "bg-color-button": map-get($colors, "white")
 );
 
+// Dark Themes
 $theme-dark: (
   "bg-color": map-get($colors, "navy"),
   "font-color": map-get($colors, "white"),
@@ -16,7 +18,7 @@ $theme-dark: (
   "bg-color-button": map-get($colors, "orange")
 );
 
-body {
+:root, body {
   @each $name, $color in $colors {
     --#{$name}: #{$color};
   }
