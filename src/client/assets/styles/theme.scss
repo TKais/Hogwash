@@ -1,0 +1,27 @@
+@import 'colors.scss';
+
+$theme-light: (
+  "bg-color": map-get($colors, "cream"),
+  "font-color": map-get($colors, "navy")
+);
+
+$theme-dark: (
+  "bg-color": map-get($colors, "navy"),
+  "font-color": map-get($colors, "white")
+);
+
+body {
+  @each $name, $color in $colors {
+    --#{$name}: #{$color};
+  }
+  &.dark {
+    @each $name, $color in $theme-dark {
+      --#{$name}: #{$color};
+    }
+  }
+  &.light {
+    @each $name, $color in $theme-light {
+      --#{$name}: #{$color};
+    }
+  }
+}
