@@ -2,12 +2,16 @@
 
 $theme-light: (
   "bg-color": map-get($colors, "cream"),
-  "font-color": map-get($colors, "navy")
+  "font-color": map-get($colors, "navy"),
+  "bg-color-input": map-get($colors, "navy"),
+  "placeholder-color-input": map-get($colors, "white")
 );
 
 $theme-dark: (
   "bg-color": map-get($colors, "navy"),
-  "font-color": map-get($colors, "white")
+  "font-color": map-get($colors, "white"),
+  "bg-color-input": map-get($colors, "white"),
+  "placeholder-color-input": map-get($colors, "navy")
 );
 
 body {
