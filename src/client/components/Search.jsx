@@ -18,6 +18,8 @@ function Search() {
       } else {
         setArticles(response.articles);
       }
+    } else {
+      setError(response.message);
     }
   }
 
