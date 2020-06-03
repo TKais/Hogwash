@@ -18,6 +18,7 @@ Run tests:
 #### Front End
 * React
 * Sass
+* CSS Custom Properties
 
 #### Back End
 * NodeJS
@@ -29,5 +30,4 @@ Run tests:
 #### Testing
 * Jest
 * Enzyme
-* Lighthouse
 
