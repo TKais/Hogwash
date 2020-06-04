@@ -6,7 +6,8 @@ $theme-light: (
   "font-color": map-get($colors, "navy"),
   "bg-color-input": map-get($colors, "navy"),
   "placeholder-color-input": map-get($colors, "white"),
-  "bg-color-button": map-get($colors, "white")
+  "font-color-list": map-get($colors, "navy"),
+  "bg-color-button": map-get($colors, "white"),
 );
 
 // Dark Themes
@@ -15,6 +16,7 @@ $theme-dark: (
   "font-color": map-get($colors, "white"),
   "bg-color-input": map-get($colors, "white"),
   "placeholder-color-input": map-get($colors, "navy"),
+  "font-color-list": map-get($colors, "white"),
   "bg-color-button": map-get($colors, "orange")
 );
 
