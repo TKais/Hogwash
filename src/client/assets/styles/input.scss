@@ -7,20 +7,20 @@
   border-radius: 25px;
   padding: 0.125rem;
   border: 0.0625rem solid var(--input-bg-color);
-  color: var(--placeholder-color-input);
+  color: var(--input-placeholder-color);
   &:focus {
     @include focus;
   }
   &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: var(--placeholder-color-input);
+    color: var(--input-placeholder-color);
     opacity: 1; /* Firefox */
   }
   
   &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: var(--placeholder-color-input);
+    color: var(--input-placeholder-color);
   }
   
   &::-ms-input-placeholder { /* Microsoft Edge */
-    color: var(--placeholder-color-input);
+    color: var(--input-placeholder-color);
   }
 }
