@@ -8,7 +8,7 @@ export function isValidQueryString(queryString) {
 
 export default function isURLOrQueryString(string) {
   // check if the given input is a URL or query string
-  const urlRegex = /^(https?|chrome):\/\/[^\s$.?#].[^\s]*$/gm;
+  const urlRegex = /^(https?|chrome):\/\/[^\s$.?#].[^\s]*$/g;
 
   return urlRegex.test(string) ? 'url' : 'query';
 }

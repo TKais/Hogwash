@@ -25,7 +25,7 @@ function Search() {
 
   async function submitInput() {
     try {
-      if (API.isURLOrQueryString(searchString) === 'query') {
+      if (API.isURLOrQueryString(searchString) === 'query' && API.isValidQueryString(searchString)) {
         const requestArticles = await API.getArticles(searchString);
         const response = await requestArticles.json();
         console.log(response);
