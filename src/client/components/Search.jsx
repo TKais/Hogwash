@@ -28,7 +28,6 @@ function Search() {
       if (API.isURLOrQueryString(searchString) === 'query' && API.isValidQueryString(searchString)) {
         const requestArticles = await API.getArticles(searchString);
         const response = await requestArticles.json();
-        console.log(response);
         updateUI(response);
       }
     } catch (err) {
