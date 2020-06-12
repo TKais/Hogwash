@@ -3,12 +3,14 @@ import Input from './Input.jsx';
 import Button from './Button.jsx';
 import Error from './Error.jsx';
 import List from './List.jsx';
+import Loader from './Loader.jsx';
 import API from '../js';
 
 function Search() {
   const [searchString, setSearchString] = useState('');
   const [error, setError] = useState('');
   const [articles, setArticles] = useState([]);
+  const [loading, setLoadingStatus] = useState(false);
 
   function updateUI(response) {
     if (response.status === 'ok') {
@@ -48,12 +50,11 @@ function Search() {
         variant="primary"
         onClick={submitInput}
       />
-      {
-        error.length > 0 && <Error message={error} />
-      }
-      {
-        articles && articles.length > 0 && <List items={articles} />
-      }
+      { error.length > 0 && <Error message={error} /> }
+
+      { loading && <Loader /> }
+      
+      { articles && articles.length > 0 && <List items={articles} /> }
     </div>
   );
 }
