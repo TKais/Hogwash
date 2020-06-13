@@ -14,13 +14,16 @@
   &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: var(--input-placeholder-color);
     opacity: 1; /* Firefox */
+    padding: 1.5rem;
   }
   
   &:-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: var(--input-placeholder-color);
+    padding: 1.5rem;
   }
   
   &::-ms-input-placeholder { /* Microsoft Edge */
     color: var(--input-placeholder-color);
+    padding: 1.5rem;
   }
 }
