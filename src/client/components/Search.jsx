@@ -14,6 +14,7 @@ function Search() {
 
   function updateUI(response) {
     if (response.status === 'ok') {
+      setLoadingStatus(false);
       if (response.totalResults === 0) {
         setError('No results for this search');
         setArticles([]);
