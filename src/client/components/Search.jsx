@@ -28,12 +28,14 @@ function Search() {
 
   async function submitInput() {
     try {
+      setLoadingStatus(true);
       if (API.isURLOrQueryString(searchString) === 'query' && API.isValidQueryString(searchString)) {
         const requestArticles = await API.getArticles(searchString);
         const response = await requestArticles.json();
         updateUI(response);
       }
     } catch (err) {
+      setLoadingStatus(false);
       setError(err.message);
     }
   }
@@ -54,7 +56,7 @@ function Search() {
       { error.length > 0 && <Error message={error} /> }
 
       { loading && <Loader /> }
-      
+
       { articles && articles.length > 0 && <List items={articles} /> }
     </div>
   );
